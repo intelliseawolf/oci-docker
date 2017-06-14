@@ -3,7 +3,7 @@
 ## Environments
 
 * User in container - **develop**
-* Workking directory - /home/develop/project 
+* Workking directory - **/home/develop/project**
 * OCaml compiler **4.04.1**
 * OPAM **1.2.2**
 
