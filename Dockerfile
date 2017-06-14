@@ -11,7 +11,9 @@ RUN chmod 440 /etc/sudoers.d/develop && \
   chown -R develop:develop /home/develop
 USER develop
 ENV HOME /home/develop
-WORKDIR /home/develop/project
+WORKDIR /home/develop
 RUN sudo -u develop sh -c 'opam init -y && opam switch 4.04.1'
 RUN sudo -u develop sh -c 'opam install -y oasis ocamlfind camlp4'
 RUN sudo -u develop sh -c 'echo "eval \`opam config env\`" >> ~/.bashrc'
+RUN sudo -u develop sh -c 'mkdir project'
+WORKDIR project
