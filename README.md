@@ -4,7 +4,7 @@
 
 * User in container - **develop**
 * Workking directory - **/home/develop/project**
-* OCaml compiler **4.04.1**
+* OCaml compiler **4.04.2**
 * OPAM **1.2.2**
 
 ## Basis usage
@@ -15,9 +15,9 @@
 
 	```shell
 	#!/usr/bin/env bash
-	
+
 	eval `opam config env`
-	
+
 	opam install -y cohttp
 	```
 
