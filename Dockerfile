@@ -12,6 +12,7 @@ RUN chmod 440 /etc/sudoers.d/develop && \
 USER develop
 ENV HOME /home/develop
 WORKDIR /home/develop
-RUN opam init -y && opam switch 4.04.2 && opam install -y camlp4
+RUN opam init -y && opam switch 4.05.0 && opam install -y camlp4
 RUN echo "eval \`opam config env\`" >> ~/.bashrc
 RUN mkdir project
+
