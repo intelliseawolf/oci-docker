@@ -1,4 +1,4 @@
-FROM ubuntu:16.10
+FROM ubuntu:17.10
 ENV DEBIAN_FRONTEND noninteractive
 MAINTAINER Noritaka Horio <holy.shared.design@gmail.com>
 RUN apt-get -y update && \
