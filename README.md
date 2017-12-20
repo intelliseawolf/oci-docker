@@ -4,7 +4,7 @@
 
 * User in container - **develop**
 * Workking directory - **/home/develop/project**
-* OCaml compiler **4.05.0**
+* OCaml compiler **4.06.0**
 * OPAM **1.2.2**
 
 ## Basis usage
