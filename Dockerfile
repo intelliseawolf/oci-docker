@@ -1,6 +1,7 @@
 FROM ubuntu:17.10
 ENV DEBIAN_FRONTEND noninteractive
-MAINTAINER Noritaka Horio <holy.shared.design@gmail.com>
+ARG compiler_version="4.06.1"
+LABEL maintainer "Noritaka Horio <holy.shared.design@gmail.com>"
 RUN apt-get -y update && \
   apt-get -y install sudo m4 opam libssl-dev pkg-config && \
   rm -rf /var/lib/apt/lists/*
@@ -12,7 +13,6 @@ RUN chmod 440 /etc/sudoers.d/develop && \
 USER develop
 ENV HOME /home/develop
 WORKDIR /home/develop
-RUN opam init -y && opam switch 4.06.0 && opam install -y camlp4
+RUN opam init -y && opam switch ${compiler_version} && opam install -y camlp4
 RUN echo "eval \`opam config env\`" >> ~/.bashrc
 RUN mkdir project
-
