@@ -1,9 +1,9 @@
-FROM ubuntu:17.10
+FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND noninteractive
 ARG compiler_version="4.06.1"
 LABEL maintainer "Noritaka Horio <holy.shared.design@gmail.com>"
-RUN apt-get -y update && \
-  apt-get -y install sudo m4 opam libssl-dev pkg-config && \
+RUN apt -y update && \
+  apt -y install sudo m4 opam libssl-dev pkg-config && \
   rm -rf /var/lib/apt/lists/*
 RUN adduser --disabled-password --gecos "" develop && passwd -l develop
 ADD developsudo /etc/sudoers.d/develop
