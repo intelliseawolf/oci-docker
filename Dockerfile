@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND noninteractive
-ARG compiler_version="4.07.0"
+ARG compiler_version="4.07.1"
 LABEL maintainer "Noritaka Horio <holy.shared.design@gmail.com>"
 RUN apt -y update && \
   apt -y install sudo m4 curl wget rsync git mercurial darcs unzip bubblewrap libssl-dev pkg-config && \
